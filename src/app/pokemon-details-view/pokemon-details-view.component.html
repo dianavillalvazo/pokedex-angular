@@ -1,0 +1,39 @@
+<div class="generalContainer">
+  <div>
+    <h1>{{ pokemon.name }}</h1>
+    <div class="imageContainer">
+      <img
+        class="pokemonImage"
+        [src]="pokemon.sprites.other.dream_world.front_default"
+        [alt]="pokemon.name"
+      />
+    </div>
+    <div class="generalInfoContainer">
+      <div>
+        <h3>Number</h3>
+        <p>{{ pokemon.id }}</p>
+      </div>
+      <div>
+        <h3>Height</h3>
+        <p>{{ pokemon.height }}</p>
+      </div>
+      <div>
+        <h3>Weight</h3>
+        <p>{{ pokemon.weight }}</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>Types:</h3>
+    <ul>
+      <li *ngFor="let value of pokemon.types">
+        {{ value.type.name }}
+      </li>
+    </ul>
+    <h3>Stats:</h3>
+    <div className="stat" *ngFor="let stat of pokemon.stats">
+      <h4 className="statName">{{ stat.stat.name }}</h4>
+      <p className="statName">{{ stat.base_stat }}</p>
+    </div>
+  </div>
+</div>

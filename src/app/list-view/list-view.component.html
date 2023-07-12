@@ -1,0 +1,31 @@
+<h1>POKEDEX</h1>
+<div class="pokemonsList">
+  <ng-template ngFor let-pokemon [ngForOf]="pokemonsList">
+    <div class="pokemonCard">
+      <a
+        [routerLink]="['pokemon', pokemon.details.id]"
+        *ngIf="pokemon.details"
+        class="pokemonLink"
+      >
+        <div>
+          <h2>
+            {{ pokemon.name }}
+          </h2>
+
+          <h4>Type:</h4>
+          <p>{{ pokemon.details.types[0].type.name }}</p>
+        </div>
+        <div class="imageContainer">
+          <img
+            class="pokemonImage"
+            [src]="pokemon.details.sprites.other.dream_world.front_default"
+            [alt]="pokemon.name"
+          />
+        </div>
+      </a>
+    </div>
+  </ng-template>
+</div>
+
+<button>Prev</button>
+<button>Next</button>

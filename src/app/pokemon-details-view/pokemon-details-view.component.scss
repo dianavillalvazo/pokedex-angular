@@ -1,0 +1,33 @@
+.generalContainer h1{
+    margin: 0 20px;
+    text-transform: capitalize;
+}
+
+.generalContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.generalInfoContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statName {
+    margin-right: 8px;
+}
+
+.statsContainer, .generalContainer {
+    padding: 20px;
+    width: 40%;
+}
+
+.statsContainer {
+    margin-top: 40px;
+}
