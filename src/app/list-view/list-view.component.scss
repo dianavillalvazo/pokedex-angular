@@ -1,19 +1,32 @@
-.imageContainer {
+.buttonsContainer {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-.pokemonCard {
-    background-color: #B8D8BA;
-    border: 1px solid #FCDDBC;
-    margin: 4px;
+.nextButton, .prevButton {
+    background-color:#FCDDBC;
+    border: 1px solid #EF959D;
     border-radius: 4px;
-    width: 20%;
+    color: #69585F;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 12px;
+    padding: 8px 12px;
 }
 
-.pokemonImage{
-    height: 100px;
-    width: 100px;
+.nextButton:disabled, .prevButton:disabled {
+    background-color: #EF959D;
+    border: 1px solid #FCDDBC;
+    color: #69585F;
+    cursor: default;
+}
+
+.nextButton {
+    margin-left: 16px;
+}
+
+.pokemonItem {
+    width: 20%;
 }
 
 .pokemonsList {
@@ -22,15 +35,12 @@
     justify-content: center;
 }
 
-.pokemonLink {
+.titleContainer {
     display: flex;
-    justify-content: space-around;
-    padding: 12px;
-    text-decoration: none;
-    color: #69585F;
-    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
 }
 
-.pokemonLink:visited {
-    color: #69585F;
+.titleImage {
+    max-height: 150px;
 }

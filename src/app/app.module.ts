@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { PokemonDetailsViewComponent } from './pokemon-details-view/pokemon-details-view.component';
+import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { PokemonDetailsViewComponent } from './pokemon-details-view/pokemon-deta
     ListItemComponent,
     ListViewComponent,
     PokemonDetailsViewComponent,
+    PokemonSearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

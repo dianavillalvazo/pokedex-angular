@@ -1,1 +1,19 @@
-<p>list-item works!</p>
+<div class="pokemonCard" *ngIf="pokemon">
+  <a [routerLink]="['pokemon', pokemon.id]" class="pokemonLink">
+    <div>
+      <h2>
+        {{ pokemon.name }}
+      </h2>
+
+      <h4>Type:</h4>
+      <p>{{ pokemon.types[0].type.name }}</p>
+    </div>
+    <div class="imageContainer">
+      <img
+        class="pokemonImage"
+        [src]="pokemon.sprites.other.dream_world.front_default"
+        [alt]="pokemon.name"
+      />
+    </div>
+  </a>
+</div>

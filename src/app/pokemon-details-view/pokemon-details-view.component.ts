@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PokeapiService } from '../pokeapi.service';
+import { singlePokemonResponse } from '../types/types';
 
 @Component({
   selector: 'pokemon-details-view',
@@ -8,9 +9,7 @@ import { PokeapiService } from '../pokeapi.service';
   styleUrls: ['./pokemon-details-view.component.scss'],
 })
 export class PokemonDetailsViewComponent {
-  private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
-
-  public pokemon: any;
+  public pokemon: singlePokemonResponse | undefined;
   public isLoading: boolean = false;
   public apiError: boolean = false;
 
@@ -20,13 +19,9 @@ export class PokemonDetailsViewComponent {
   ) {}
 
   ngOnInit(): void {
-    this.getPokemon();
-  }
-
-  public getPokemon() {
     const id = this.activatedRoute.snapshot.params['id'];
     this.pokeApiService
-      .apiGetPokemon(`${this.urlPokemon}/${id}`)
+      .apiGetPokemonById(id)
       .subscribe((res) => (this.pokemon = res));
   }
 }

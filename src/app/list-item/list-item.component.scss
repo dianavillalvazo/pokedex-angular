@@ -1,0 +1,29 @@
+.imageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.pokemonCard {
+    background-color: #B8D8BA;
+    border: 1px solid #FCDDBC;
+    margin: 4px;
+    border-radius: 4px;
+}
+
+.pokemonImage {
+    height: 100px;
+    width: 100px;
+}
+
+.pokemonLink {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    text-decoration: none;
+    color: #69585F;
+    text-transform: capitalize;
+}
+
+.pokemonLink:visited {
+    color: #69585F;
+}
